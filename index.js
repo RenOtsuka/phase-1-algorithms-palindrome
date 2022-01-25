@@ -1,5 +1,19 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let i = 0; 
+  //console.log(word.length/2);
+  for(; i < word.length / 2; i++){
+    if(word[i] !== word[word.length - 1 - i]){
+      return false;
+    }
+    else if(word[i] === word[word.length - 1 - i]){
+      continue;
+    }
+  }
+
+  if(i === Math.ceil(word.length / 2)){
+    return true;
+  }
 }
 
 /* 
